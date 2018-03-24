@@ -15,6 +15,17 @@ matrix:
           linux32 --32bit i386 ./build.sh &&
           tree"
 
+    - env: NAME="Ubuntu 32bit staging"
+      sudo: required
+      services:
+        - docker
+      before_install:
+        - docker run -d --name ubuntu-16-04 -v $(pwd):/travis daald/ubuntu32:xenial tail -f /dev/null
+      install:
+        - ./install-ubuntu-deps-docker.sh
+      script:
+        - docker exec -t ubuntu-16-04 bash -c "cd /travis; linux32 --32bit i386 ./build-staging.sh"
+
     - env: NAME="Ubuntu 64bit"
       sudo: required
       services:
