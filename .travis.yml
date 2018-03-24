@@ -2,7 +2,8 @@ language: c
 
 matrix:
   include:
-    - sudo: required
+    - env: NAME="Ubuntu 64bit"
+      sudo: required
       services:
         - docker
       before_install:
@@ -16,8 +17,9 @@ matrix:
           cd build-64bit &&
           ../wine/configure --enable-win64 &&
           make -j2 &&
-          tree"
-    - os: osx
+          tree"          
+    - env: NAME="OSX 64bit"
+      os: osx
       osx_image: xcode9.2
       install:
         - brew install caskroom/cask/xquartz
