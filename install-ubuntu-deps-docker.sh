@@ -30,4 +30,14 @@ docker exec -t ubuntu-16-04 bash -c "apt-get -qq update;
                                      apt-get install -y libgsm1-dev;
                                      apt-get install -y libmpg123-dev;
                                      apt-get install -y libopenal-dev;
+                                     apt-get install -y libncurses5-dev;
+                                     apt-get install -y liblcms2-dev;
+                                     apt-get install -y libfontconfig1-dev;
+                                     apt-get install -y libkrb5-dev;
+                                     apt-get install -y libgssapi-krb5-2;
+                                     apt-get install -y libtiff5-dev;
+                                     apt-get install -y libldap2-dev;
+                                     apt-get install -y libxslt1-dev;
+                                     apt-get install -y libgnutls-dev;
+                                     apt-get install -y libjpeg-dev;
                                      apt-get install -y libvulkan-dev"
