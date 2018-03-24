@@ -53,6 +53,12 @@ matrix:
       install:
         - brew install caskroom/cask/xquartz
         - brew install --only-dependencies caskroom/versions/wine-devel
+        - brew install gettext
+        - brew install libquicktime
+        - brew install libgphoto2
+        - brew install libgsm
+        - brew install krb5
+        - brew install openal-soft
       script:
         - git clone https://github.com/wine-mirror/wine.git
         - mkdir build-64bit
