@@ -55,3 +55,24 @@ matrix:
         - cd build-64bit
         - ../wine/configure --enable-win64
         - make -j2
+    - env: NAME="OSX 64bit staging"
+      os: osx
+      osx_image: xcode9.2
+      install:
+        - brew install caskroom/cask/xquartz
+        - brew install --only-dependencies caskroom/versions/wine-devel
+        - brew install gettext
+        - brew install libquicktime
+        - brew install libgphoto2
+        - brew install libgsm
+        - brew install gst-plugins-base
+        - brew install openal-soft
+      script:
+        - git clone https://github.com/wine-mirror/wine.git 
+        - # TBD: use https://github.com/alesliehughes/alesliehughes-wine-staging.git
+        - git clone https://github.com/wine-compholio/wine-staging.git &&
+        - ./wine-staging/patches/patchinstall.sh DESTDIR=wine --all
+        - mkdir build-64bit
+        - cd build-64bit
+        - ../wine/configure --enable-win64
+        - make -j2
