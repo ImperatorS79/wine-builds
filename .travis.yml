@@ -12,7 +12,7 @@ matrix:
         - ./install-ubuntu-deps-docker.sh
       script:
         - docker exec -t ubuntu-16-04 bash -c "cd /travis;
-          ./build.sh --enable-win64
+          ./build.sh --enable-win64 &&
           tree"
     - env: NAME="Ubuntu 64bit staging"
       sudo: required
