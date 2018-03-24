@@ -12,11 +12,7 @@ matrix:
         - ./install-ubuntu-deps-docker.sh
       script:
         - docker exec -t ubuntu-16-04 bash -c "cd /travis;
-          git clone https://github.com/wine-mirror/wine.git &&
-          mkdir build &&
-          cd build &&
-          ../wine/configure --enable-win64 &&
-          make -j2 &&
+          ./build.sh --enable-win64
           tree"
     - env: NAME="Ubuntu 64bit staging"
       sudo: required
@@ -27,16 +23,7 @@ matrix:
       install:
         - ./install-ubuntu-deps-docker.sh
       script:
-          # TBD: use https://github.com/alesliehughes/alesliehughes-wine-staging.git
-        - docker exec -t ubuntu-16-04 bash -c "cd /travis;
-          git clone https://github.com/wine-mirror/wine.git &&
-          git clone https://github.com/wine-compholio/wine-staging.git &&
-          ./wine-staging/patches/patchinstall.sh DESTDIR=wine --all
-          mkdir build &&
-          cd build &&
-          ../wine/configure --enable-win64 &&
-          make -j2 &&
-          tree"
+        - docker exec -t ubuntu-16-04 bash -c "cd /travis; ./build-staging.sh --enable-win64"
     - env: NAME="OSX 64bit"
       os: osx
       osx_image: xcode9.2
@@ -50,11 +37,7 @@ matrix:
         - brew install gst-plugins-base
         - brew install openal-soft
       script:
-        - git clone https://github.com/wine-mirror/wine.git
-        - mkdir build
-        - cd build
-        - ../wine/configure --enable-win64
-        - make -j2
+        - ./build.sh --enable-win64
     - env: NAME="OSX 64bit staging"
       os: osx
       osx_image: xcode9.2
@@ -68,11 +51,4 @@ matrix:
         - brew install gst-plugins-base
         - brew install openal-soft
       script:
-          # TBD: use https://github.com/alesliehughes/alesliehughes-wine-staging.git
-        - git clone https://github.com/wine-mirror/wine.git 
-        - git clone https://github.com/wine-compholio/wine-staging.git &&
-        - ./wine-staging/patches/patchinstall.sh DESTDIR=wine --all
-        - mkdir build
-        - cd build
-        - ../wine/configure --enable-win64
-        - make -j2
+        - ./build-staging.sh --enable-win64
