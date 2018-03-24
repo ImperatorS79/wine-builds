@@ -54,7 +54,7 @@ matrix:
       os: osx
       osx_image: xcode9.2
       install:
-        - ./install-osx-deps.sh
+        - ./install-osx-deps-32bit.sh
       script:
         - ./build.sh
 
@@ -62,7 +62,7 @@ matrix:
       os: osx
       osx_image: xcode9.2
       install:
-        - ./install-osx-deps.sh
+        - ./install-osx-deps-32bit.sh
       script:
         - ./build-staging.sh
 
@@ -70,7 +70,7 @@ matrix:
       os: osx
       osx_image: xcode9.2
       install:
-        - ./install-osx-deps.sh
+        - ./install-osx-deps-64bit.sh
       script:
         - ./build.sh --enable-win64
 
@@ -78,6 +78,6 @@ matrix:
       os: osx
       osx_image: xcode9.2
       install:
-        - ./install-osx-deps.sh
+        - ./install-osx-deps-64bit.sh
       script:
         - ./build-staging.sh --enable-win64
