@@ -8,7 +8,7 @@ matrix:
       before_install:
         - docker run -d --name ubuntu-16-04 -v $(pwd):/travis ubuntu:16.04 tail -f /dev/null
       install:
-        - install-ubuntu-deps-docker.sh
+        - ./install-ubuntu-deps-docker.sh
       script:
         - docker exec -t ubuntu-16-04 bash -c "cd /travis;
           git clone https://github.com/wine-mirror/wine.git &&
