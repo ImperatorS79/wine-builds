@@ -51,8 +51,8 @@ matrix:
     - os: osx
       osx_image: xcode9.2
       install:
-        - brew install Caskroom/cask/xquartz
-        - brew install --only-dependencies --devel wine
+        - brew install caskroom/cask/xquartz
+        - brew install --only-dependencies caskroom/versions/wine-devel
       script:
         - git clone https://github.com/wine-mirror/wine.git
         - mkdir build-64bit
