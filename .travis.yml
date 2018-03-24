@@ -57,7 +57,7 @@ matrix:
         - brew install libquicktime
         - brew install libgphoto2
         - brew install libgsm
-        - brew install krb5
+        - brew install gst-plugins-base
         - brew install openal-soft
       script:
         - git clone https://github.com/wine-mirror/wine.git
