@@ -54,14 +54,7 @@ matrix:
       os: osx
       osx_image: xcode9.2
       install:
-        - brew install caskroom/cask/xquartz
-        - brew install --only-dependencies caskroom/versions/wine-devel
-        - brew install gettext
-        - brew install libquicktime
-        - brew install libgphoto2
-        - brew install libgsm
-        - brew install gst-plugins-base
-        - brew install openal-soft
+        - ./install-osx-deps.sh
       script:
         - ./build.sh
 
@@ -69,14 +62,7 @@ matrix:
       os: osx
       osx_image: xcode9.2
       install:
-        - brew install caskroom/cask/xquartz
-        - brew install --only-dependencies caskroom/versions/wine-devel
-        - brew install gettext
-        - brew install libquicktime
-        - brew install libgphoto2
-        - brew install libgsm
-        - brew install gst-plugins-base
-        - brew install openal-soft
+        - ./install-osx-deps.sh
       script:
         - ./build-staging.sh
 
@@ -84,14 +70,7 @@ matrix:
       os: osx
       osx_image: xcode9.2
       install:
-        - brew install caskroom/cask/xquartz
-        - brew install --only-dependencies caskroom/versions/wine-devel
-        - brew install gettext
-        - brew install libquicktime
-        - brew install libgphoto2
-        - brew install libgsm
-        - brew install gst-plugins-base
-        - brew install openal-soft
+        - ./install-osx-deps.sh
       script:
         - ./build.sh --enable-win64
 
@@ -99,13 +78,6 @@ matrix:
       os: osx
       osx_image: xcode9.2
       install:
-        - brew install caskroom/cask/xquartz
-        - brew install --only-dependencies caskroom/versions/wine-devel
-        - brew install gettext
-        - brew install libquicktime
-        - brew install libgphoto2
-        - brew install libgsm
-        - brew install gst-plugins-base
-        - brew install openal-soft
+        - ./install-osx-deps.sh
       script:
         - ./build-staging.sh --enable-win64
