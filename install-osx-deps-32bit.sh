@@ -1,6 +1,6 @@
 #!/bin/sh
 # use tigerbrew tap to get universal
-brew tap mistydemeo/tigerbrew https://github.com/mistydemeo/tigerbrew
+brew tap mistydemeo/tigerbrew https://github.com/mistydemeo/tigerbrew/library
 brew tap-pin mistydemeo/tigerbrew
 
 brew install mistydemeo/tigerbrew/freetype --universal
