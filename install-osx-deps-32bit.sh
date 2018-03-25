@@ -1,9 +1,7 @@
 #!/bin/sh
-# use tigerbrew to get universal support
-cd `brew --repository`
-git remote set-url origin https://github.com/mistydemeo/tigerbrew.git
-git fetch origin
-git reset --hard origin/master
+# use tigerbrew tap to get universal
+brew tap mistydemeo/tigerbrew
+brew tap-pin mistydemeo/tigerbrew
 
 brew install freetype --universal
 brew install gettext --universal
