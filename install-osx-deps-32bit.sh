@@ -1,7 +1,7 @@
 #!/bin/sh
 # use tigerbrew tap to get universal
 brew tap mistydemeo/tigerbrew
-brew tap-pin mistydemeo/tigerbrew
+brew tap-pin mistydemeo/tigerbrew https://github.com/mistydemeo/tigerbrew
 
 brew install freetype --universal
 brew install gettext --universal
