@@ -3,6 +3,7 @@ brew install caskroom/cask/xquartz --universal
 brew install --only-dependencies caskroom/versions/wine-devel --universal
 brew remove freetype && brew remove libpng
 brew install freetype --universal
+brew unlink freetype && brew link freetype
 brew install gettext --universal
 brew install libquicktime --universal
 brew install libgphoto2 --universal
