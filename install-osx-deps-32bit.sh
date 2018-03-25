@@ -1,9 +1,11 @@
 #!/bin/sh
-brew install caskroom/cask/xquartz --universal
-brew install --only-dependencies caskroom/versions/wine-devel --universal
-brew remove freetype && brew remove libpng
+# use tigerbrew to get universal support
+cd `brew --repository`
+git remote set-url origin https://github.com/mistydemeo/tigerbrew.git
+git fetch origin
+git reset --hard origin/master
+
 brew install freetype --universal
-brew unlink freetype && brew link freetype
 brew install gettext --universal
 brew install libquicktime --universal
 brew install libgphoto2 --universal
