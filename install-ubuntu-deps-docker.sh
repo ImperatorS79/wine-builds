@@ -1,5 +1,5 @@
 #!/bin/sh
-docker exec -t ubuntu-16-04 bash -c "apt-get -qq update;
+docker exec -t ubuntu-18-04 bash -c "apt-get -qq update;
                                      apt-get install -y git;
                                      apt-get install -y build-essential;
                                      apt-get install -y tree;
