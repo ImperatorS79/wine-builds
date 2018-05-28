@@ -10,7 +10,7 @@ make install
 cd ../
 
 git clone https://github.com/wine-mirror/wine.git
-git clone https://github.com/wine-wine-staging/wine-staging.git
+git clone https://github.com/wine-staging/wine-staging.git
 ./wine-staging/patches/patchinstall.sh DESTDIR=wine --all
 mkdir build &&
 cd build &&
