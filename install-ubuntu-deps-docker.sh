@@ -52,5 +52,10 @@ docker exec -t ubuntu-18-04 bash -c "apt-get -qq update;
 				     wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/spirv-headers/1.3-1/spirv-headers_1.3.orig.tar.gz ;
 				     tar -zxvf spirv-headers_1.3.orig.tar.gz;
 				     mv spirv-headers-1.3/include/spirv /usr/include;
+				     wget https://github.com/KhronosGroup/SPIRV-Tools/releases/download/master-tot/SPIRV-Tools-master-linux-RelWithDebInfo.zip;
+				     unzip SPIRV-Tools-master-linux-RelWithDebInfo.zip -d spirv-tools/;
+				     cp spirv-tools/bin/* /usr/bin;
+				     cp -r spirv-tools/include/* /usr/include;
+				     cp -r spirv-tools/lib/* /usr/lib;
 				     apt-get install -y libgtk-3-dev;
 				     apt-get install -y libva-dev"
