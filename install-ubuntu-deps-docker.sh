@@ -1,7 +1,7 @@
 #!/bin/sh
 docker exec -t ubuntu-18-04 bash -c "apt-get -qq update;
                                      apt-get install -y git;
-                                     apt-get install -y build-essential;
+                                     apt-get install -y gcc;
                                      apt-get install -y tree;
                                      apt-get install -y flex;
                                      apt-get install -y bison;
