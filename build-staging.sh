@@ -14,5 +14,5 @@ git clone https://github.com/wine-staging/wine-staging.git
 ./wine-staging/patches/patchinstall.sh DESTDIR=wine --all
 mkdir build &&
 cd build &&
-../wine/configure $1 &&
+../wine/configure --disable-tests $1 &&
 make -j3
