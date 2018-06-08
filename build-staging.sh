@@ -8,7 +8,7 @@ make -j3 &&
 make install
 
 cd ../
-https://dl.winehq.org/wine/source/3.x/wine-3.9.tar.xz
+wget https://dl.winehq.org/wine/source/3.x/wine-3.9.tar.xz
 tar -xf wine-3.9.tar.xz
 git clone -n https://github.com/wine-staging/wine-staging.git
 git checkout 69650f38d8979fc40ccb4a4bee64c06fb59336d5
