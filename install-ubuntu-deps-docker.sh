@@ -50,13 +50,7 @@ docker exec -t ubuntu-18-04 bash -c "apt-get -qq update;
 				     apt-get install -y libxcb-util0-dev;
 				     apt-get install -y libxcb-icccm4-dev;
                                      apt-get install -y libvulkan-dev;
-				     wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/spirv-headers/1.3-1/spirv-headers_1.3.orig.tar.gz ;
-				     tar -zxvf spirv-headers_1.3.orig.tar.gz;
-				     mv spirv-headers-1.3/include/spirv /usr/include;
-				     wget https://github.com/KhronosGroup/SPIRV-Tools/releases/download/master-tot/SPIRV-Tools-master-linux-RelWithDebInfo.zip;
-				     unzip SPIRV-Tools-master-linux-RelWithDebInfo.zip -d spirv-tools/;
-				     cp spirv-tools/bin/* /usr/bin;
-				     cp -r spirv-tools/include/* /usr/include;
-				     cp -r spirv-tools/lib/* /usr/lib;
+				     wget http://fr.archive.ubuntu.com/ubuntu/pool/universe/v/vkd3d/vkd3d-dev_1.0-2_amd64.deb
+				     dpkg -i vkd3d-dev_1.0-2_amd64.deb
 				     apt-get install -y libgtk-3-dev;
 				     apt-get install -y libva-dev"
