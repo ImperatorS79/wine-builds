@@ -50,7 +50,9 @@ docker exec -t ubuntu-18-04 bash -c "apt-get -qq update;
 				     apt-get install -y libxcb-util0-dev;
 				     apt-get install -y libxcb-icccm4-dev;
                                      apt-get install -y libvulkan-dev;
-				     wget http://fr.archive.ubuntu.com/ubuntu/pool/universe/v/vkd3d/vkd3d-dev_1.0-2_amd64.deb
-				     dpkg -i vkd3d-dev_1.0-2_amd64.deb
 				     apt-get install -y libgtk-3-dev;
-				     apt-get install -y libva-dev"
+				     apt-get install -y libva-dev;
+				     wgeat http://fr.archive.ubuntu.com/ubuntu/pool/universe/v/vkd3d/vkd3d1_1.0-2_amd64.deb;
+				     dpkg -i vkd3d1_1.0-2_amd64.deb;
+				     wget http://fr.archive.ubuntu.com/ubuntu/pool/universe/v/vkd3d/vkd3d-dev_1.0-2_amd64.deb;
+				     dpkg -i vkd3d-dev_1.0-2_amd64.deb"
